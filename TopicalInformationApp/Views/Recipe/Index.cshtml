@@ -1,0 +1,96 @@
+﻿@model IEnumerable<TopicalInformationApp.Models.Recipe>
+
+@using PagedList;
+@using PagedList.Mvc;
+
+@{
+    ViewBag.Title = "Index";
+
+    var pagedList = (IPagedList)Model;
+}
+
+<h2>Ergo Brewing Recipe Archiver</h2>
+
+@using (Html.BeginForm())
+{
+    <div id="SearchFilter" class="form-horizontal">
+
+        <div class="form-group">
+            @Html.Label("Search by Beer Name", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.TextBox("searchKey", null, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Filter by Style", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.DropDownList("styleFilter",
+                                        new SelectList(@ViewBag.Styles),
+                                        "All Styles",
+                                        new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Find Beers by Name" class="btn col-md-2 col-md-offset-2" />
+            <input type="button" value="Reset Beer Recipe List" onclick="location.href='@Url.Action("Index", "Recipe")'" class="btn col-md-2 col-md-offset-2" />
+        </div>
+
+    </div>
+}
+
+<div class="form-group">
+    <input type="button" value="Create New" onclick="location.href='@Url.Action("Create", "Recipe")'" class="btn" />
+</div>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.ActionLink(@Html.DisplayNameFor(model => model.Name).ToHtmlString(), "Index", new { sortOrder = "NAME" })
+
+        </th>
+        <th>
+            @Html.ActionLink(@Html.DisplayNameFor(model => model.Style).ToHtmlString(), "Index", new { sortOrder = "STYLE" })
+
+        </th>
+        <th>
+            @Html.ActionLink(@Html.DisplayNameFor(model => model.ABV).ToHtmlString(), "Index", new { sortOrder = "ABV" })
+
+        </th>
+        <th>
+            @Html.ActionLink(@Html.DisplayNameFor(model => model.IBU).ToHtmlString(), "Index", new { sortOrder = "IBU" })
+
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Style)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ABV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IBU)
+            </td>
+            <td>
+                <div class="form-group-sm no-color btn-sm">
+                    <input type="button" value="Details" class="btn btn-default" onclick="location.href='@Url.Action("Details", "Recipe", new { id = item.Id })'" />
+                    <input type="button" value="Edit" class="btn btn-default" onclick="location.href='@Url.Action("Edit", "Recipe", new { id = item.Id })'" />
+                    <input type="button" value="Delete" class="btn btn-danger" onclick="location.href='@Url.Action("Delete", "Recipe", new { id = item.Id })'" />
+                </div>
+            </td>
+        </tr>
+    }
+
+</table>
+
+<br /> <br />
+
+ Page @(pagedList.PageCount < pagedList.PageNumber ? 0 : pagedList.PageNumber) of @pagedList.PageCount
+
+@Html.PagedListPager(pagedList, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))

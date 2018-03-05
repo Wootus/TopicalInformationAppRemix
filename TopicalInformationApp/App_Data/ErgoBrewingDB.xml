@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Recipes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Recipe>
+    <Id>1</Id>
+    <Name>Wheaty Warrior</Name>
+    <Style>IPA</Style>
+    <ABV>6.5</ABV>
+    <IBU>65</IBU>
+  </Recipe>
+  <Recipe>
+    <Id>2</Id>
+    <Name>Ergo IPA</Name>
+    <Style>IPA</Style>
+    <ABV>7</ABV>
+    <IBU>77</IBU>
+  </Recipe>
+  <Recipe>
+    <Id>3</Id>
+    <Name>Peninsula RyePA</Name>
+    <Style>RYE</Style>
+    <ABV>6.5</ABV>
+    <IBU>62</IBU>
+  </Recipe>
+  <Recipe>
+    <Id>4</Id>
+    <Name>Just Around Rye</Name>
+    <Style>RYE</Style>
+    <ABV>7.1</ABV>
+    <IBU>82</IBU>
+  </Recipe>
+  <Recipe>
+    <Id>6</Id>
+    <Name>Without-You Stout</Name>
+    <Style>STOUT</Style>
+    <ABV>7</ABV>
+    <IBU>29</IBU>
+  </Recipe>
+  <Recipe>
+    <Id>7</Id>
+    <Name>Two-Hearted Ale</Name>
+    <Style>IPA</Style>
+    <ABV>7.2</ABV>
+    <IBU>80</IBU>
+  </Recipe>
+  <Recipe>
+    <Id>8</Id>
+    <Name>Stone IPA</Name>
+    <Style>IPA</Style>
+    <ABV>6.7</ABV>
+    <IBU>70</IBU>
+  </Recipe>
+  <Recipe>
+    <Id>9</Id>
+    <Name>Slurm Lord East Coast IPA</Name>
+    <Style>IPA</Style>
+    <ABV>7.2</ABV>
+    <IBU>77</IBU>
+  </Recipe>
+  <Recipe>
+    <Id>10</Id>
+    <Name>Psychidelic Cat Grass</Name>
+    <Style>DIPA</Style>
+    <ABV>8.2</ABV>
+    <IBU>90</IBU>
+  </Recipe>
+  <Recipe>
+    <Id>11</Id>
+    <Name>Ol' Grannies Stout</Name>
+    <Style>STOUT</Style>
+    <ABV>9</ABV>
+    <IBU>32</IBU>
+  </Recipe>
+  <Recipe>
+    <Id>12</Id>
+    <Name>Roll Them Wheels Porter</Name>
+    <Style>PORTER</Style>
+    <ABV>5.5</ABV>
+    <IBU>22</IBU>
+  </Recipe>
+  <Recipe>
+    <Id>13</Id>
+    <Name>Shutdown Stout</Name>
+    <Style>STOUT</Style>
+    <ABV>6.1</ABV>
+    <IBU>29</IBU>
+  </Recipe>
+  <Recipe>
+    <Id>14</Id>
+    <Name>Coffee Stout</Name>
+    <Style>STOUT</Style>
+    <ABV>67</ABV>
+    <IBU>20</IBU>
+  </Recipe>
+  <Recipe>
+    <Id>15</Id>
+    <Name>Hand-me-Down Stout</Name>
+    <Style>STOUT</Style>
+    <ABV>5.9</ABV>
+    <IBU>27</IBU>
+  </Recipe>
+  <Recipe>
+    <Id>16</Id>
+    <Name>alpha</Name>
+    <Style>IPA</Style>
+    <ABV>5</ABV>
+    <IBU>30</IBU>
+  </Recipe>
+</Recipes>
